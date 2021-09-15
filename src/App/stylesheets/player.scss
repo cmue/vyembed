@@ -1,0 +1,22 @@
+.player-container {
+  position: relative;
+  width: 100%;
+  clear: both;
+  margin-bottom: 30px;
+
+  img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+.v3-embed .player-container {
+  position: relative;
+  background: black;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 56.25%;
+}

@@ -1,0 +1,52 @@
+.resizer {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  padding-top: 30px;
+
+  .resize-slider {
+    background: #131313;
+    position: fixed;
+    bottom: 0;
+    height: 30px;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    line-height: 30px;
+    color: #2F2F2F;
+    font-size: 14px;
+    @include transition(background 0.2s);
+
+    &:before {
+      content: '';
+      height: 50%;
+      width: 100%;
+      border-bottom: 1px solid white;
+    }
+
+    .resize-handle {
+      height: 100%;
+      background: rgba(0, 0, 0, 0.35);
+      width: 20px;
+      float: left;
+      cursor: pointer;
+      @include transition(background 0.1s);
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.3);
+      }
+
+      &.right {
+        float: right;
+      }
+    }
+  }
+}
+
+.light-mode .resizer {
+  .resize-slider {
+    background: #b2b2b2;
+    color: #666;
+  }
+}
